@@ -20,7 +20,7 @@ class SignupRequest(BaseModel):
     username: str
     first_name: Optional[str]
     last_name: Optional[str]
-    email: str
+    email: Optional[str]
     password: str
     password_confirm: str
 

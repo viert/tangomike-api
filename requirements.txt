@@ -1,1 +1,4 @@
 croydon
+grpcio
+protobuf
+aiohttp

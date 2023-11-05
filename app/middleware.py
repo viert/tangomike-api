@@ -24,6 +24,7 @@ class SessionMiddleware(BaseHTTPMiddleware):
         request.state.session = session
         response = await call_next(request)
 
+        print(request.state.session, request.state.session.is_modified())
         if request.state.session.is_modified():
             try:
                 await request.state.session.save()

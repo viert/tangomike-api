@@ -38,7 +38,7 @@ async def authenticate(
 
     user = await User.get(auth_request.username)
     if user is None or not user.check_password(auth_request.password):
-        raise AuthenticationError()
+        raise AuthenticationError("invalid username or password")
     session.user_id = user.id
 
     return AccountMeResponse(**user.to_dict())

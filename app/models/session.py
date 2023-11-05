@@ -17,4 +17,4 @@ class Session(StorableModel):
     async def user(self) -> Optional["User"]:
         if self.user_id is None:
             return None
-        await User.cache_get(self.user_id)
+        return await User.cache_get(self.user_id)

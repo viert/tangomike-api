@@ -10,7 +10,7 @@ ttl = "90 00:00:00" # 90 days
 cookie = "_tangomike_session_id"
 
 [database]
-uri = "mongodb://db:27017/tangomike"
+uri = "mongodb://localhost:27017/tangomike"
 timeout = 1.1 # 1.1 seconds
 
 [queue]
@@ -25,5 +25,5 @@ cleanup_interval = "01:00:00" # 1 hour
 level1 = "request_local"
 level2 = "simple"
 
-# [memcached]
-# backends = ["127.0.0.1:11211"]
+[grpc]
+socket = "localhost:9200"
